@@ -16,6 +16,7 @@ function Register() {
               width={246}
               height={246}
               src={"/Images/logo.webp"}
+              alt=""
             ></Image>
           </Link>
           <p className="text-center">Register new account</p>

@@ -67,7 +67,7 @@ function Login() {
         </div>
         <p className="text-center">Or</p>
         <div className="register flex justify-center gap-5">
-          <p>Don't have any account?</p>
+        <p>Don&apos;t have any account?</p>
           <button className="underline text-green-600 font-semibold hover:no-underline">
             <Link href="/signup">Sign Up</Link>
           </button>

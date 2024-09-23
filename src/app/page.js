@@ -190,6 +190,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/FreshFruit.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Fresh Fruit</p>
           </div>
@@ -199,6 +200,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/FreshVegetables.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Fresh Vegetables</p>
           </div>
@@ -208,6 +210,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/MeatFish.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Meat & Fish</p>
           </div>
@@ -217,6 +220,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/Snacks.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Snacks</p>
           </div>
@@ -226,6 +230,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/Beverages.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Beverages</p>
           </div>
@@ -235,6 +240,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/BeautyHealth.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Beauty & Health</p>
           </div>
@@ -244,6 +250,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/BreadBakery.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Bread & Bakery</p>
           </div>
@@ -253,6 +260,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/BakingNeeds.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Baking Needs</p>
           </div>
@@ -262,6 +270,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/Cooking.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Cooking</p>
           </div>
@@ -271,6 +280,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/DiabeticFood.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Diabetic Food</p>
           </div>
@@ -280,6 +290,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/DishDetergents.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Dish Detergents</p>
           </div>
@@ -289,6 +300,7 @@ export default function Home() {
               width={100}
               height={100}
               src={"/Images/Oil.png"}
+              alt=""
             ></Image>
             <p className="font-medium text-sm lg:text-base">Oil</p>
           </div>
@@ -317,6 +329,7 @@ export default function Home() {
               width={246}
               height={246}
               src={"/Images/Lettuce.png"}
+              alt=""
             ></Image>
             <div className="px-4">
               <h3 className="text-sm font-normal">Chanise Cabbage</h3>
@@ -354,6 +367,7 @@ export default function Home() {
               width={246}
               height={246}
               src={"/Images/Chili.png"}
+              alt=""
             ></Image>
             <div className="px-4">
               <h3 className="text-sm font-normal">Green Chili</h3>
@@ -391,6 +405,7 @@ export default function Home() {
               width={246}
               height={246}
               src={"/Images/corn.png"}
+              alt=""
             ></Image>
             <div className="px-4">
               <h3 className="text-sm font-normal">Corn</h3>
@@ -424,10 +439,11 @@ export default function Home() {
           </div>
           <div className=" group w-full border-[1px] border-solid border-[#E6E6E6] flex flex-col justify-center relative  gap-5   py-5 cursor-pointer transition-shadow duration-150	ease-in-out hover:border-[#2C742F]  hover:shadow-md hover:shadow-[#2c742e6d] ">
             <Image
-              className=" w-full   	"
+              className=" w-full"
               width={246}
               height={246}
               src={"/Images/GreenLettuce.png"}
+              alt=""
             ></Image>
             <div className="px-4">
               <h3 className="text-sm font-normal">Chanise Cabbage</h3>
@@ -474,6 +490,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/greenapple.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -513,6 +530,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/Eggplant.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -552,6 +570,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/GreenLettuce.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -595,6 +614,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/Eggplant.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -634,6 +654,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/Capsicum.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -673,6 +694,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/Tomatos.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -715,6 +737,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/Potatos.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -754,6 +777,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/corn.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -793,6 +817,7 @@ export default function Home() {
                 width={100}
                 height={100}
                 src={"/Images/cauliflower.png"}
+                alt=""
               ></Image>
 
               <div className="flex flex-col gap-2 w-[50%] ">
@@ -873,6 +898,7 @@ export default function Home() {
                 width={246}
                 height={246}
                 src={"/Images/farmer.jpg"}
+                alt=""
               />
             </div>
 
@@ -895,6 +921,7 @@ export default function Home() {
                 width={246}
                 height={246}
                 src={"/Images/farmer2.jpg"}
+                alt=""
               />
             </div>
 
@@ -917,6 +944,7 @@ export default function Home() {
                 width={246}
                 height={246}
                 src={"/Images/farmer4.jpg"}
+                alt=""
               />
             </div>
 
@@ -939,6 +967,7 @@ export default function Home() {
                 width={246}
                 height={246}
                 src={"/Images/farmer.jpg"}
+                alt=""
               />
             </div>
 
@@ -982,6 +1011,7 @@ export default function Home() {
                   width={246}
                   height={246}
                   src={"/Images/test1.webp"}
+                  alt=""
                 ></Image>
                 <div className="flex flex-col">
                   <h1 className="font-medium text-base">Robert Fox</h1>
@@ -1011,6 +1041,7 @@ export default function Home() {
                   width={246}
                   height={246}
                   src={"/Images/test1.webp"}
+                  alt=""
                 ></Image>
                 <div className="flex flex-col">
                   <h1 className="font-medium text-base">Robert Fox</h1>
@@ -1040,6 +1071,7 @@ export default function Home() {
                   width={246}
                   height={246}
                   src={"/Images/test1.webp"}
+                  alt=""
                 ></Image>
                 <div className="flex flex-col">
                   <h1 className="font-medium text-base">Robert Fox</h1>

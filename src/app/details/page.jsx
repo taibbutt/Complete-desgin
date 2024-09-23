@@ -250,7 +250,12 @@ const ProductDetails = () => {
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start space-x-2">
                   <span className="w-[18px] h-[18px] rounded-full bg-[#00B207] flex justify-center items-center">
-                    <img src="/check.png" alt="heck" />
+                    <Image
+                      width={10}
+                      height={10}
+                      src="/check.png"
+                      alt="check"
+                    />
                   </span>
                   <span className="text-[14px] md:text-[16px]">
                     100 g of fresh leaves provided.
@@ -258,7 +263,7 @@ const ProductDetails = () => {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="w-[18px] h-[18px] rounded-full bg-[#00B207] flex justify-center items-center">
-                    <img src="/check.png" alt="heck" />
+                    <Image width={10} height={10} src="/check.png" alt="heck" />
                   </span>
                   <span className="text-[14px] md:text-[16px]">
                     Aliquam ac est at augue volutpat elementum.
@@ -266,7 +271,7 @@ const ProductDetails = () => {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="w-[18px] h-[18px] rounded-full bg-[#00B207] flex justify-center items-center">
-                    <img src="/check.png" alt="heck" />
+                    <Image width={10} height={10} src="/check.png" alt="heck" />
                   </span>
                   <span className="text-[14px] md:text-[16px]">
                     Quisque nec enim eget sapien molestie.
@@ -274,7 +279,7 @@ const ProductDetails = () => {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="w-[18px] h-[18px] rounded-full bg-[#00B207] flex justify-center items-center">
-                    <img src="/check.png" alt="heck" />
+                    <Image width={10} height={10} src="/check.png" alt="heck" />
                   </span>
                   <span className="text-[14px] md:text-[16px]">
                     Proin convallis odio volutpat finibus posuere.
@@ -289,7 +294,9 @@ const ProductDetails = () => {
 
             {/* Right Image Content */}
             <div className="relative lg:w-[536px]">
-              <img
+              <Image
+                width={800}
+                height={800}
                 src="/shop.png"
                 alt="Product"
                 className="rounded-lg w-full h-[300px]"
@@ -298,7 +305,12 @@ const ProductDetails = () => {
               {/* Discount & Organic Info */}
               <div className="mt-4 flex lg:space-x-8 space-x-0 border rounded-lg py-4 md:p-4 p-0 w-full">
                 <div className="flex items-center space-x-2">
-                  <img src="/price-tag.png" alt="" />
+                  <Image
+                    width={40}
+                    height={40}
+                    src="/price-tag.png"
+                    alt="price"
+                  />
                   <div>
                     <p className="text-gray-800 font-medium md:font-bold">
                       64% Discount
@@ -309,7 +321,7 @@ const ProductDetails = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <img src="/leaf.png" alt="" />
+                  <Image width={40} height={40} src="/leaf.png" alt="leaf" />
                   <div>
                     <p className="text-gray-800 font-medium md:font-bold">
                       100% Organic

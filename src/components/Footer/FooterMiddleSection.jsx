@@ -64,7 +64,7 @@ const FooterMiddleSection = () => {
           <h3 className="font-semibold text-gray-800">Download Mobile App</h3>
           <div className="flex">
             <a href="#">
-              <Image src={footerpic} width={400} />
+              <Image src={footerpic} width={400} alt='' />
             </a>
           </div>
         </div>

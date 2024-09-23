@@ -13,7 +13,7 @@ const FooterBottomSection = () => {
 
         {/* Payment Icons */}
         <div className="flex items-center justify-center md:justify-end space-x-2">
-          <Image src={pay} width={300} />
+          <Image src={pay} width={300} alt='' />
         </div>
       </div>
     </div>

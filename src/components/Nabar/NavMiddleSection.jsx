@@ -25,7 +25,7 @@ const NavMiddleSection = () => {
         <div className="container w-[95vw] mx-auto px-2 py-3 flex justify-between items-center">
           {/* Logo Section */}
           <div>
-           <Link href={'/'}> <Image src={ecobazaar} width={150} height={50} /></Link>
+           <Link href={'/'}> <Image src={ecobazaar} width={150} height={50} alt='' /></Link>
           </div>
 
           {/* Search Bar */}
