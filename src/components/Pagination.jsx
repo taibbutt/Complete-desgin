@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 const Pagination = ({ totalPages, currentPage, onPageChange }) => {
@@ -42,7 +43,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
           <button
             onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
           >
-            <img src="/left.png" alt="Previous" />
+            <Image width={7} height={7} src="/left.png" alt="Previous" />
           </button>
         </li>
 
@@ -71,7 +72,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
               currentPage < totalPages && onPageChange(currentPage + 1)
             }
           >
-            <img src="/right.png" alt="Next" />
+            <Image width={7} height={7} src="/right.png" alt="Next" />
           </button>
         </li>
       </ul>
