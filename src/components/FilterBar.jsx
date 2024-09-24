@@ -153,11 +153,7 @@ const FilterBar = () => {
           </div>
           {filters.price && (
             <>
-              <RangeSlider min={0} max={500} initialValue={250} />
-              <div className="flex gap-2 mt-2 pb-4">
-                <p>Price:</p>
-                <span className="font-medium pb-2">$ 15 - $1,500</span>
-              </div>
+              <RangeSlider min={450} max={3800}/>
             </>
           )}
         </div>
