@@ -151,7 +151,7 @@ const NavMiddleSection = () => {
               {/* Navigation Links */}
               <ul
                 className="text-white p-4 space-y-4 flex flex-col items-center"
-                onClick={setTimeout(toggleMenu, 100)}
+                onClick={toggleMenu}
               >
                 <li>
                   <Link href="/" className="block hover:text-gray-300">
