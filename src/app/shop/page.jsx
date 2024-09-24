@@ -113,12 +113,17 @@ export default function Shop() {
                 Sort By :
               </p>
               <select class="px-[17px] text-[14px] rounded  border border-gray-400 bg-transparent h-[41px] w-[170px] outline-none pl-1">
-                <option>latest</option>
+                <option>Latest</option>
+                <option>Featured</option>
+                <option>Price low to high</option>
+                <option>Price hogh to low</option>
               </select>
             </div>
 
             <div class="flex gap-2">
-              <p class="font-bold text-sm md:text-base">52</p>
+              <p class="font-bold text-sm md:text-base">
+                {products && products.length}
+              </p>
               <p class="text-gray-500 text-sm md:text-base">Results Found</p>
             </div>
           </div>

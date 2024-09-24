@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import RangeSlider from "./RangeSlider";
+import MyRangeSlider from "./RangeSlider";
 
 const FilterBar = () => {
   const [filters, setFilters] = useState({
@@ -94,6 +94,8 @@ const FilterBar = () => {
     }));
   };
 
+  const getRange = (min, max) => {}
+
   return (
     <aside className="w-full md:w-[300px] pl-4 pr-3 md:pr-2 mb-5 mt-6 sm:mt-0 md:mb-0 font-bold bg-white">
       <button className="w-[130px] h-[45px] text-[14px] bg-[#00B207] py-[14px] rounded-[43px] text-white flex justify-center items-center gap-4 mb-8 md:mb-5">
@@ -153,7 +155,7 @@ const FilterBar = () => {
           </div>
           {filters.price && (
             <>
-              <RangeSlider min={450} max={3800}/>
+              <MyRangeSlider min={0} max={1000} getRange = {getRange}/>
             </>
           )}
         </div>
