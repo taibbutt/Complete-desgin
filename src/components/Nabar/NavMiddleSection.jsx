@@ -10,11 +10,11 @@ import ecobazaar from '../../app/images/ecobazaar.jpg';
 import Link from 'next/link';
 
 const NavMiddleSection = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for hamburger menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [ishamburgerOpen, setIshamburgerOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu open/close state
+    setIsMenuOpen(!isMenuOpen);
     setIshamburgerOpen(!ishamburgerOpen)
   };
 
@@ -40,7 +40,7 @@ const NavMiddleSection = () => {
 
           {/* Contact Info */}
           <div className="flex gap-2 items-center space-x-1 text-gray-500 text-sm">
-            <FaPhoneAlt size={20} /> {/* Reduced icon size for small screens */}
+            <FaPhoneAlt size={20} />
             <div className="flex flex-col">
               {/* Adjusting the font size for different screen sizes */}
               <span className="text-[8px] sm:text-[10px] md:text-xs">Customer Services</span>
@@ -100,7 +100,7 @@ const NavMiddleSection = () => {
               </div>
 
               {/* Navigation Links */}
-              <ul className="text-white p-4 space-y-4 flex flex-col items-center">
+              <ul className="text-white p-4 space-y-4 flex flex-col items-center" onClick={toggleMenu}>
                 <li><Link href="/" className="block hover:text-gray-300">Home</Link></li>
                 <li><Link href="/shop" className="block hover:text-gray-300">Shop</Link></li>
                 <li><a href="#" className="block hover:text-gray-300">Pages</a></li>
