@@ -4,107 +4,39 @@ import BreadCrum from "@/components/BreadCrum";
 import FilterBar from "@/components/FilterBar";
 import Pagination from "@/components/Pagination";
 import ProductsCard from "@/components/ProductsCard";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Shop() {
-  const products = [
-    {
-      name: "Big Potatoes",
-      rating: 5,
-      price: 14.99,
-      image: "/Image.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/tomato.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/apple.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 5,
-      price: 14.99,
-      image: "/culi.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/bhindi.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 3,
-      price: 14.99,
-      image: "/brinjal.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/preview.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/japani.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 5,
-      price: 14.99,
-      image: "/mirch.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/peach.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/redmirch.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 3,
-      price: 14.99,
-      image: "/salad.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 2,
-      price: 14.99,
-      image: "/shimla.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/tomato.png",
-    },
-    {
-      name: "Big Potatoes",
-      rating: 4,
-      price: 14.99,
-      image: "/brinjal.png",
-    },
-  ];
+  const [product, setProduct] = useState([]);
+  const [getCategoryValue, setGetCategoryValue] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get(
+          "http://97.74.89.204:4000/product/allProducts?pageNo=1&pageSize=100"
+        );
+        setProduct(data.data);
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+ const filterProducts = getCategoryValue
+ ? product.filter((item) => item.Category.id == getCategoryValue)
+ : product; 
+
 
   return (
     <>
       <section class="flex md:flex-row flex-col my-6 w-[95vw] mx-auto">
         {/* <!-- Sidebar --> */}
 
-        <FilterBar />
+        <FilterBar setGetCategoryValue={setGetCategoryValue} />
 
         <main class="w-full md:w-[75%] h-full mt-2 md:mt-0">
           <div class="flex justify-between items-center mb-3 px-3 h-[45px]">
@@ -122,7 +54,7 @@ export default function Shop() {
 
             <div class="flex gap-2">
               <p class="font-bold text-sm md:text-base">
-                {products && products.length}
+                   {filterProducts.length}
               </p>
               <p class="text-gray-500 text-sm md:text-base">Results Found</p>
             </div>
@@ -133,8 +65,8 @@ export default function Shop() {
           <section class=" flex justify-center items-center gap-2 sm:gap-3 flex-wrap md:ml-7 mt-5 ">
             {/* <!-- Cards --> */}
 
-            {products.map((item, index) => [
-              <ProductsCard key={index} product={item} />,
+            {filterProducts && filterProducts.map((item) => [
+              <ProductsCard key={item.id} product={item} />,
             ])}
           </section>
         </main>

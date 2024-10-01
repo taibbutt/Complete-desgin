@@ -1,12 +1,35 @@
 "use client";
 
 import ProductsCard from "@/components/ProductsCard";
+import axios from "axios";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const ProductDetails = () => {
+const ProductDetails = ({ params }) => {
+  const { id } = params;
+  console.log(id)
+
   const [selectedImage, setSelectedImage] = useState("/preview.png");
   const [quantity, setQuantity] = useState(0);
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async (id) => {
+      try {
+        const { data } = await axios.get(
+          `http://97.74.89.204:4000/product/getById/${id}`
+        );
+        setProduct(data.data);
+        setSelectedImage(data.data.image)
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+
+    fetchData(id);
+  }, [id]);
+
+  console.log(product)
 
   const images = [
     "/preview.png",
@@ -50,6 +73,8 @@ const ProductDetails = () => {
     setQuantity((prevQty) => (prevQty > 0 ? prevQty - 1 : prevQty));
   }
 
+  console.log(selectedImage)
+
   return (
     <main className="w-full flex justify-center items-center overflow-hidden px-3 my-10">
       <section className="my-6 w-full lg:w-[90vw]">
@@ -78,7 +103,7 @@ const ProductDetails = () => {
             {/* Preview Image */}
             <div className="w-[350px] sm:w-[400px] lg:w-[556px]">
               <Image
-                src={selectedImage}
+                src={"http://97.74.89.204/uploads/products/3067216fdd3760ec9f46aa896ce48beb.jpeg"}
                 alt="Preview Image"
                 width={556}
                 height={556}
@@ -90,7 +115,7 @@ const ProductDetails = () => {
           <div className="w-full lg:w-1/2 h-auto lg:h-[501px]">
             <div className="flex items-center gap-3">
               <h1 className="text-[25px] lg:text-[36px] font-semibold">
-                Chinese Cabbage
+                {product.name}
               </h1>
               <div className="w-[71px] h-[29px] rounded-[4px] bg-[#20B52633] text-[#2C742F] text-[14px] py-[4px] px-[8px]">
                 In Stock
@@ -117,7 +142,7 @@ const ProductDetails = () => {
               <p className="text-[#666666] text-[18px] font-normal line-through ">
                 $48.00
               </p>
-              <p className="text-[#2C742F] text-[24px] font-medium">$17.28</p>
+              <p className="text-[#2C742F] text-[24px] font-medium">${product.basePrice}</p>
               <div className="w-[75px] h-[27px] rounded-[30px] bg-[#EA4B481A] text-[#EA4B48] text-[14px] py-[3px] px-[10px]">
                 In Stock
               </div>
@@ -146,10 +171,7 @@ const ProductDetails = () => {
 
             <div className="w-full lg::w-[568px] mt-4">
               <p className="text-[14px] md:text-[16px] text-[#808080]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                natus blanditiis voluptas nobis voluptates dolore? Facere
-                ducimus, optio dolorum quaerat fugit rerum pariatur corporis
-                reprehenderit.
+              {product.longDescription}
               </p>
             </div>
 

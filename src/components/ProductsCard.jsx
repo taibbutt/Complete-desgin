@@ -8,13 +8,13 @@ const ProductsCard = ({ product }) => {
     <>
     <div className="group w-[47%] h-[100%] py-4 sm:py-0 sm:w-[280px] hover:shadow-x-[#00B207] hover:shadow-lg sm:h-[407px] border border-gray-300 rounded-xl relative hover:border-[#2C742F] overflow-hidden ">
         <div>
-          <Link href={`/details`}>
+          <Link href={`/details/eecd0ca6557194f575f68e65fc62bc94`}>
             <Image
-              className="p-3 sm:p-0 w-[95%] sm:max-h-[300px] sm:min-h-[300px] object-contain aspect-square"
+              className="p-3 sm:p-0 w-[full] sm:max-h-[300px] sm:min-h-[300px] object-contain aspect-square"
               width={500}
               height={300}
               objectFit="cover"
-              src={product.image}
+              src={"http://97.74.89.204/uploads/products/3067216fdd3760ec9f46aa896ce48beb.jpeg"}
               alt={product.name}
             />
           </Link>
@@ -50,7 +50,7 @@ const ProductsCard = ({ product }) => {
               <p className="text-[#4D4D4D] text-[14px]">
                 {product.name}
               </p>
-              <p className="text-[16px] py-1 font-medium">$ {product.price}</p>
+              <p className="text-[16px] py-1 font-medium">$ {product.basePrice}</p>
               <div className="flex">
                 <Rating rating={Math.round(product?.rating)} />
               </div>
